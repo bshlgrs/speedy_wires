@@ -108,10 +108,9 @@ int main (int argc, char * argv[]) {
   printf("reading %s\n", argv[1]);
   struct world * world = read(argv[1]);
 
-  print_world(world);
   for (i = 0; i < cycles; i++) {
     evolve_world(world);
-    print_world(world);
   }
   destroy_world(world);
+  printf("done\n");
 }
