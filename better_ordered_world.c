@@ -21,8 +21,8 @@ struct world {
   struct cell * cell_array;
 };
 
-bool cell_greater_than(struct cell cell1, int x, int y) {
-  return (cell1.y > y || (cell1.y ==  y && cell1.x > x));
+bool cell_greater_than(struct cell cell, int x, int y) {
+  return (cell.y > y || (cell.y ==  y && cell.x > x));
 }
 
 int binary_search(int x, int y, struct world * world) {
